@@ -1,0 +1,85 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
+
+body::before {
+    content: '';
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 270px;
+    background: linear-gradient(-25deg, black, #444, black);
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    text-shadow: 0 2 px black;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 50px -10px black;
+    animation: cardAnimation 1s alternate infinite;
+}
+
+@keyframes cardAnimation {
+    from { transform: translateY(-20px) }
+
+}
+
+.card-top, .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-top svg {
+    transform: rotate(0deg);
+    width: 50px;
+    height: 50px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.card-center {
+    z-index: 1;
+}
+
+.card-center img {
+    width: 80px;
+    padding-left: 1rem;
+}
+
+.card-bottom-left, .card-bottom-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-bottom-left {
+    gap: 0.7rem;
+}
+
+.card-number {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.card-date {
+    font-size: 0.95rem;
+}
+
+span {
+    padding-top: 10px;
+}
