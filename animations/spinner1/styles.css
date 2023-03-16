@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+.spin {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent black transparent;
+    animation: spin 1.35s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
